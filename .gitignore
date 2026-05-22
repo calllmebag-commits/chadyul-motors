@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.CFUserTextEncoding
+
+# Personal directories
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+Applications/
+.Trash/
+.zsh_history
+.zsh_sessions/
+.cache/
+.npm/
+
+# Editor & tool configs
+.vscode/
+.vscode-shared/
+.windsurf/
+.codeium/
+.codex/
+.claude/
+.claude.json
+.claude.json.backup

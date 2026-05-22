@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Chadyul Motors</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+:root{--cm-ink:#ffffff;--cm-on-primary:#000000;--cm-on-dark:#ffffff;--cm-body:#bbbbbb;--cm-muted:#7e7e7e;--cm-hairline:#3c3c3c;--cm-hairline-strong:#262626;--cm-canvas:#000000;--cm-surface-soft:#0d0d0d;--cm-surface-card:#1a1a1a;--cm-surface-elevated:#262626;--cm-m-blue-light:#0066b1;--cm-m-blue-dark:#1c69d4;--cm-m-red:#e22718;--cm-success:#0fa336;--cm-m-stripe:linear-gradient(to right,#0066b1 0%,#0066b1 33.33%,#1c69d4 33.33%,#1c69d4 66.66%,#e22718 66.66%,#e22718 100%);--cm-font-display:"BMW Type Next Latin","Inter",-apple-system,BlinkMacSystemFont,sans-serif;--cm-font-body:"BMW Type Next Latin Light","BMW Type Next Latin","Inter",-apple-system,BlinkMacSystemFont,sans-serif;--cm-content-max:1440px;--cm-nav-height:64px;--cm-stripe-height:4px;}
+*,*::before,*::after{box-sizing:border-box;}html,body{margin:0;padding:0;background:var(--cm-canvas);color:var(--cm-on-dark);font-family:var(--cm-font-body);font-weight:300;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}a{color:inherit;}img{max-width:100%;display:block;}h1,h2,h3,h4,h5,h6{margin:0;}
+.cm-container{max-width:var(--cm-content-max);margin:0 auto;padding:0 40px;}
+.site-top-stripe{height:var(--cm-stripe-height);background:var(--cm-m-stripe);}
+.site-nav{position:sticky;top:0;z-index:50;background:var(--cm-canvas);border-bottom:1px solid var(--cm-hairline-strong);}
+.site-nav__inner{display:flex;align-items:center;height:var(--cm-nav-height);padding:0 40px;gap:48px;max-width:var(--cm-content-max);margin:0 auto;}
+.site-nav__brand{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.site-nav__mark{width:36px;height:36px;display:flex;}.site-nav__mark>span{flex:1;}.site-nav__mark>span:nth-child(1){background:var(--cm-m-blue-light);}.site-nav__mark>span:nth-child(2){background:var(--cm-m-blue-dark);}.site-nav__mark>span:nth-child(3){background:var(--cm-m-red);}
+.site-nav__wordmark{font-family:var(--cm-font-display);font-size:14px;font-weight:700;letter-spacing:2.5px;color:#fff;text-transform:uppercase;line-height:1;}
+.site-nav__wordmark>small{display:block;font-size:9px;font-weight:400;letter-spacing:4px;color:var(--cm-body);margin-top:4px;}
+.site-nav__links{display:flex;gap:32px;margin-left:24px;}
+.site-nav__links a{font-family:var(--cm-font-display);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#fff;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent;white-space:nowrap;transition:border-color .12s,opacity .12s;}
+.site-nav__links a:hover{opacity:.7;}.site-nav__links a.is-active{border-bottom-color:var(--cm-m-red);}
+.site-nav__util{margin-left:auto;display:flex;align-items:center;gap:8px;}
+.site-nav__util .lang{font-family:var(--cm-font-display);font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--cm-body);text-transform:uppercase;margin-right:12px;}
+.icon-btn{width:40px;height:40px;background:transparent;border:0;color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0;transition:opacity .12s;}.icon-btn:hover{opacity:.7;}
+.hamburger{display:none;background:none;border:0;color:#fff;cursor:pointer;padding:6px;align-items:center;justify-content:center;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 32px;border:1px solid #fff;border-radius:0;background:#fff;color:#000;font-family:var(--cm-font-display);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .12s,color .12s;}
+.btn:hover{background:transparent;color:#fff;}.btn--outline{background:transparent;color:#fff;}.btn--outline:hover{background:#fff;color:#000;}
+.textlink{display:inline-flex;align-items:center;gap:10px;font-family:var(--cm-font-display);font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#fff;text-decoration:none;}.textlink::after{content:"→";font-weight:400;letter-spacing:0;}.textlink:hover{opacity:.7;}
+.section{padding:96px 0;background:var(--cm-canvas);}.section--tight{padding:64px 0;}.section--soft{background:var(--cm-surface-soft);}
+.section__head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;gap:24px;}
+.section__head h2{margin:0;font-family:var(--cm-font-display);font-size:clamp(40px,5vw,56px);font-weight:700;line-height:1.05;letter-spacing:-0.3px;text-transform:uppercase;color:#fff;}
+.section__kicker{font-family:var(--cm-font-display);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--cm-body);margin-bottom:16px;display:inline-flex;align-items:center;gap:16px;}
+.section__kicker::before{content:"";width:24px;height:2px;background:var(--cm-m-red);}
+.cta-band{position:relative;padding:120px 0;overflow:hidden;background:var(--cm-surface-soft);}
+.cta-band__bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.35;filter:grayscale(.2);}
+.cta-band__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4),rgba(0,0,0,.85));}
+.cta-band__inner{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;}
+.cta-band h2{margin:0;font-family:var(--cm-font-display);font-size:clamp(40px,6vw,80px);font-weight:700;letter-spacing:-0.04em;text-transform:uppercase;line-height:1;}
+.cta-band p{margin:0;font-family:var(--cm-font-body);font-size:18px;font-weight:300;color:var(--cm-body);max-width:580px;}
+.cta-band__buttons{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.site-footer{background:var(--cm-canvas);border-top:1px solid var(--cm-hairline-strong);padding:80px 0 32px;}
+.site-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:32px;align-items:start;}
+.site-footer__brand{display:flex;flex-direction:column;gap:16px;}
+.site-footer__brand-mark{width:40px;height:40px;display:flex;}.site-footer__brand-mark>span{flex:1;}.site-footer__brand-mark>span:nth-child(1){background:var(--cm-m-blue-light);}.site-footer__brand-mark>span:nth-child(2){background:var(--cm-m-blue-dark);}.site-footer__brand-mark>span:nth-child(3){background:var(--cm-m-red);}
+.site-footer__brand h4{margin:0;font-family:var(--cm-font-display);font-size:18px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#fff;}
+.site-footer__brand p{margin:0;max-width:280px;font-family:var(--cm-font-body);font-size:13px;font-weight:300;line-height:1.6;color:var(--cm-body);}
+.site-footer__col h5{margin:0 0 18px;font-family:var(--cm-font-display);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#fff;}
+.site-footer__col ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;}
+.site-footer__col a{font-family:var(--cm-font-body);font-size:13px;font-weight:300;color:var(--cm-body);text-decoration:none;cursor:pointer;}
+.site-footer__col a:hover{color:#fff;}
+.site-footer__stripe{margin:56px 0 24px;height:4px;background:var(--cm-m-stripe);}
+.site-footer__legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-family:var(--cm-font-display);font-size:11px;font-weight:400;letter-spacing:.5px;color:var(--cm-muted);}
+.site-footer__legal a{color:var(--cm-muted);text-decoration:none;margin-right:24px;}.site-footer__legal a:hover{color:#fff;}
+/* PAGE HERO */
+.page-hero{position:relative;padding:120px 0 80px;border-bottom:1px solid var(--cm-hairline-strong);overflow:hidden;}
+.page-hero__bg{position:absolute;inset:0;z-index:0;opacity:.35;background-size:cover;background-position:center;filter:grayscale(.3);}
+.page-hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.95) 100%);}
+.page-hero__inner{position:relative;z-index:2;}
+.page-hero h1{margin:0;font-family:var(--cm-font-display);font-size:clamp(56px,9vw,128px);font-weight:700;line-height:.92;letter-spacing:-0.04em;text-transform:uppercase;color:#fff;}
+.page-hero h1 .stroke{color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.45);}
+.page-hero__sub{margin:24px 0 0;max-width:580px;font-family:var(--cm-font-body);font-size:18px;font-weight:300;line-height:1.55;color:var(--cm-body);}
+.breadcrumbs{font-family:var(--cm-font-display);font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--cm-body);text-transform:uppercase;margin-bottom:32px;display:flex;gap:12px;align-items:center;}
+.breadcrumbs a{color:var(--cm-body);text-decoration:none;}.breadcrumbs a:hover{color:#fff;}.breadcrumbs .sep{color:var(--cm-muted);}.breadcrumbs .current{color:#fff;}
+/* ABOUT */
+.about-two-col{display:grid;grid-template-columns:1fr 1.4fr;gap:96px;align-items:start;}
+.about-two-col h2{margin-top:0;}
+.about-two-col p{margin:0 0 18px;font-family:var(--cm-font-body);font-size:16px;font-weight:300;line-height:1.7;color:var(--cm-body);}
+.about-numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--cm-hairline-strong);border:1px solid var(--cm-hairline-strong);}
+.about-numbers__cell{background:var(--cm-surface-soft);padding:40px 32px;}
+.about-numbers__value{font-family:var(--cm-font-display);font-size:56px;font-weight:700;color:#fff;line-height:1;letter-spacing:-1px;}
+.about-numbers__value small{font-size:20px;font-weight:400;color:var(--cm-body);letter-spacing:0;margin-left:4px;}
+.about-numbers__label{margin-top:16px;font-family:var(--cm-font-display);font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--cm-muted);text-transform:uppercase;}
+/* TIMELINE */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--cm-hairline-strong);border-top:1px solid var(--cm-hairline-strong);border-bottom:1px solid var(--cm-hairline-strong);}
+.timeline__cell{background:var(--cm-canvas);padding:40px 32px;}
+.timeline__year{font-family:var(--cm-font-display);font-size:14px;font-weight:700;letter-spacing:2px;color:var(--cm-m-red);margin-bottom:12px;}
+.timeline__title{font-family:var(--cm-font-display);font-size:20px;font-weight:700;letter-spacing:-0.2px;color:#fff;text-transform:uppercase;margin-bottom:12px;line-height:1.2;}
+.timeline__body{font-family:var(--cm-font-body);font-size:13px;font-weight:300;line-height:1.55;color:var(--cm-body);}
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.team-card{display:block;}
+.team-card__photo{aspect-ratio:3/4;background:linear-gradient(180deg,#2b2b2b 0%,#0d0d0d 100%);position:relative;overflow:hidden;}
+.team-card__photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4) contrast(1.05);}
+.team-card__name{margin:16px 0 4px;font-family:var(--cm-font-display);font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;}
+.team-card__role{font-family:var(--cm-font-display);font-size:11px;font-weight:400;letter-spacing:1.5px;text-transform:uppercase;color:var(--cm-body);}
+/* INTERACTIVE */
+.search-overlay{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.97);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px;opacity:0;pointer-events:none;transition:opacity .2s ease;}
+.search-overlay.is-open{opacity:1;pointer-events:all;}
+.search-overlay__inner{width:100%;max-width:720px;}
+.search-overlay__label{font-family:var(--cm-font-display);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--cm-muted);margin-bottom:24px;}
+.search-overlay__input{width:100%;background:none;border:0;border-bottom:2px solid #fff;color:#fff;font-family:var(--cm-font-display);font-size:clamp(28px,5vw,52px);font-weight:700;letter-spacing:-0.5px;text-transform:uppercase;padding:16px 0;outline:none;}
+.search-overlay__input::placeholder{color:#262626;}
+.search-overlay__hint{margin-top:20px;font-family:var(--cm-font-display);font-size:11px;font-weight:400;letter-spacing:1px;color:var(--cm-muted);text-transform:uppercase;}
+.search-overlay__close{position:absolute;top:28px;right:40px;background:none;border:0;color:#fff;cursor:pointer;font-family:var(--cm-font-display);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;display:flex;align-items:center;gap:8px;opacity:.6;}
+.search-overlay__close:hover{opacity:1;}
+.mobile-nav{position:fixed;inset:0;z-index:200;background:#000;flex-direction:column;justify-content:center;align-items:center;gap:28px;display:none;}
+.mobile-nav.is-open{display:flex;}
+.mobile-nav__stripe{width:48px;height:4px;background:var(--cm-m-stripe);margin-bottom:8px;}
+.mobile-nav a{font-family:var(--cm-font-display);font-size:clamp(28px,7vw,48px);font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;text-decoration:none;transition:color .12s;}
+.mobile-nav a:hover,.mobile-nav a.is-active{color:var(--cm-m-red);}
+.mobile-nav__close{position:absolute;top:20px;right:24px;background:none;border:0;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:8px;opacity:.7;}
+.mobile-nav__close:hover{opacity:1;}
+.modal-backdrop{position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.88);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .2s ease;}
+.modal-backdrop.is-open{opacity:1;pointer-events:all;}
+.modal{position:fixed;inset:0;z-index:401;display:flex;align-items:center;justify-content:center;padding:24px;pointer-events:none;}
+.modal.is-open{pointer-events:all;}
+.modal__box{background:var(--cm-surface-soft);border:1px solid var(--cm-hairline-strong);border-top:3px solid var(--cm-m-red);width:100%;max-width:700px;max-height:90vh;overflow-y:auto;padding:48px;position:relative;opacity:0;transform:translateY(20px);transition:opacity .25s ease,transform .25s ease;}
+.modal.is-open .modal__box{opacity:1;transform:translateY(0);}
+.modal__close{position:absolute;top:20px;right:20px;width:40px;height:40px;background:none;border:0;color:var(--cm-body);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:color .12s;}.modal__close:hover{color:#fff;}
+.modal__kicker{font-family:var(--cm-font-display);font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--cm-m-red);margin-bottom:10px;}
+.modal__title{font-family:var(--cm-font-display);font-size:28px;font-weight:700;text-transform:uppercase;letter-spacing:-0.2px;color:#fff;margin:0 0 6px;line-height:1.1;}
+.modal__sub{font-family:var(--cm-font-body);font-size:14px;font-weight:300;color:var(--cm-body);margin:0 0 28px;line-height:1.55;max-width:540px;}
+.modal__form{display:grid;gap:16px;}
+.modal__row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.modal__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px;}
+.modal__success{display:none;margin-top:16px;padding:18px 22px;border-left:2px solid var(--cm-success);background:rgba(15,163,54,.08);font-family:var(--cm-font-display);font-size:13px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;line-height:1.4;}
+.field{display:flex;flex-direction:column;gap:8px;}
+.field label{font-family:var(--cm-font-display);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--cm-body);}
+.field input,.field select,.field textarea{width:100%;background:var(--cm-surface-card);color:#fff;border:1px solid var(--cm-hairline);border-radius:0;height:52px;padding:0 16px;font-family:var(--cm-font-body);font-size:15px;font-weight:300;outline:none;transition:border-color .12s;}
+.field textarea{height:auto;min-height:120px;padding:16px;resize:vertical;}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#fff;}
+.field input::placeholder,.field textarea::placeholder{color:var(--cm-muted);}
+.field select option{background:var(--cm-surface-card);}
+.waitlist-modal{position:fixed;inset:0;z-index:401;display:flex;align-items:center;justify-content:center;padding:24px;pointer-events:none;}
+.waitlist-modal.is-open{pointer-events:all;}
+.waitlist-modal__box{background:var(--cm-surface-soft);border:1px solid var(--cm-hairline-strong);border-top:3px solid var(--cm-m-red);width:100%;max-width:520px;padding:48px;position:relative;opacity:0;transform:translateY(20px);transition:opacity .25s ease,transform .25s ease;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;}
+.waitlist-modal.is-open .waitlist-modal__box{opacity:1;transform:translateY(0);}
+.waitlist-modal__mark{width:48px;height:24px;display:flex;margin-bottom:4px;}.waitlist-modal__mark>span{flex:1;}.waitlist-modal__mark>span:nth-child(1){background:var(--cm-m-blue-light);}.waitlist-modal__mark>span:nth-child(2){background:var(--cm-m-blue-dark);}.waitlist-modal__mark>span:nth-child(3){background:var(--cm-m-red);}
+.waitlist-modal__eyebrow{font-family:var(--cm-font-display);font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--cm-m-red);}
+.waitlist-modal__title{font-family:var(--cm-font-display);font-size:28px;font-weight:700;text-transform:uppercase;color:#fff;margin:0;line-height:1.1;letter-spacing:-0.2px;}
+.waitlist-modal__body{font-family:var(--cm-font-body);font-size:14px;font-weight:300;color:var(--cm-body);max-width:380px;line-height:1.55;margin:0;}
+.waitlist-modal__input-row{width:100%;display:flex;}
+.waitlist-modal__input-row input{flex:1;background:var(--cm-surface-card);color:#fff;border:1px solid var(--cm-hairline);border-right:0;border-radius:0;height:52px;padding:0 16px;font-size:15px;font-weight:300;font-family:var(--cm-font-body);outline:none;}
+.waitlist-modal__input-row input:focus{border-color:#fff;}
+.waitlist-modal__input-row input::placeholder{color:var(--cm-muted);}
+.waitlist-modal__success{display:none;width:100%;padding:16px 20px;border-left:2px solid var(--cm-success);background:rgba(15,163,54,.08);font-family:var(--cm-font-display);font-size:13px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;text-align:left;}
+.waitlist-modal__close{position:absolute;top:16px;right:16px;background:none;border:0;color:var(--cm-body);cursor:pointer;display:flex;align-items:center;justify-content:center;width:36px;height:36px;transition:color .12s;}.waitlist-modal__close:hover{color:#fff;}
+@media(max-width:900px){.site-nav__links{display:none;}.hamburger{display:flex;}}
+@media(max-width:1100px){.about-two-col{grid-template-columns:1fr;gap:48px;}.about-numbers,.timeline{grid-template-columns:repeat(2,1fr);}.team-grid{grid-template-columns:repeat(2,1fr);}.site-footer__grid{grid-template-columns:1fr 1fr;}.modal__row{grid-template-columns:1fr;}}
+@media(max-width:640px){.cm-container{padding:0 20px;}.site-nav__inner{padding:0 20px;gap:12px;}.site-nav__wordmark>small{display:none;}.about-numbers,.timeline,.team-grid{grid-template-columns:1fr;}.site-footer__grid{grid-template-columns:1fr;}.waitlist-modal__input-row{flex-direction:column;}.waitlist-modal__input-row input{border-right:1px solid var(--cm-hairline);}.modal__box{padding:32px 24px;}.section__head{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+
+<div class="site-top-stripe"></div>
+<header class="site-nav">
+  <div class="site-nav__inner">
+    <a href="index.html" class="site-nav__brand" aria-label="Chadyul Motors">
+      <span class="site-nav__mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="site-nav__wordmark">CHADYUL<small>M&nbsp;&nbsp;O&nbsp;&nbsp;T&nbsp;&nbsp;O&nbsp;&nbsp;R&nbsp;&nbsp;S</small></span>
+    </a>
+    <nav class="site-nav__links" aria-label="Primary">
+      <a href="index.html">Models</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about.html" class="is-active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="site-nav__util">
+      <span class="lang">EN</span>
+      <button class="icon-btn" aria-label="Search" data-open="search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Locations" data-open="locations">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Account" data-open="account">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="hamburger" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero__bg" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1800&q=80&auto=format&fit=crop')"></div>
+  <div class="cm-container page-hero__inner">
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span class="current">About</span>
+    </div>
+    <h1>FIFTY YEARS<br><span class="stroke">OF M.</span></h1>
+    <p class="page-hero__sub">Chadyul Motors has been the M division's authorised retail partner since 1981. Forty-five years, five continents, twenty-seven thousand cars handed over to drivers who would not be told what to drive.</p>
+  </div>
+</section>
+
+<!-- ABOUT INTRO -->
+<section class="section">
+  <div class="cm-container">
+    <div class="about-two-col">
+      <div>
+        <div class="section__kicker">Our story</div>
+        <h2 style="font-family:var(--cm-font-display);font-size:clamp(40px,5vw,56px);font-weight:700;line-height:1.05;letter-spacing:-0.3px;text-transform:uppercase;color:#fff;">Engineered.<br>Not assembled.</h2>
+      </div>
+      <div>
+        <p>The first Chadyul showroom opened on Leopoldstraße in March 1981 — three M1 demonstrators on the floor, a Telex machine in the back, and Theodor Chadyul personally signing every delivery card.</p>
+        <p>Four decades later the principle holds. We do not stock the wider range. We do not finance generic saloons. The wall has read <strong style="color:#fff;font-weight:700;">M only</strong> for every working day of the company's history.</p>
+        <p>What changed is scale. Five showrooms across three continents. A track academy. A Manufaktur atelier that ships eight commissioned cars a month. A customer roster that includes nineteen Formula 1 drivers, four heads of state, and the better part of Bavaria's industrial nobility.</p>
+        <p>What did not change is the standard. Engineered, factual, restrained. We let the cars carry the volume.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="section section--soft section--tight">
+  <div class="cm-container">
+    <div class="about-numbers">
+      <div class="about-numbers__cell">
+        <div class="about-numbers__value">45<small>YR</small></div>
+        <div class="about-numbers__label">Authorised since 1981</div>
+      </div>
+      <div class="about-numbers__cell">
+        <div class="about-numbers__value">27,400</div>
+        <div class="about-numbers__label">Cars delivered</div>
+      </div>
+      <div class="about-numbers__cell">
+        <div class="about-numbers__value">5</div>
+        <div class="about-numbers__label">Showrooms · 3 continents</div>
+      </div>
+      <div class="about-numbers__cell">
+        <div class="about-numbers__value">96<small>%</small></div>
+        <div class="about-numbers__label">Returning customers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HERITAGE TIMELINE -->
+<section class="section">
+  <div class="cm-container">
+    <div class="section__head">
+      <div>
+        <div class="section__kicker">Heritage</div>
+        <h2>Forty-five years,<br>in headlines.</h2>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="timeline__cell">
+        <div class="timeline__year">1981</div>
+        <div class="timeline__title">Founded</div>
+        <div class="timeline__body">Theodor Chadyul opens the Leopoldstraße showroom with three M1 demonstrators and an exclusive M-only retail licence.</div>
+      </div>
+      <div class="timeline__cell">
+        <div class="timeline__year">1995</div>
+        <div class="timeline__title">London</div>
+        <div class="timeline__body">A second showroom on Berkeley Square. The first M3 GT delivered outside Germany leaves this floor.</div>
+      </div>
+      <div class="timeline__cell">
+        <div class="timeline__year">2008</div>
+        <div class="timeline__title">Track Academy</div>
+        <div class="timeline__body">Two-day customer driving programme launches at Salzburgring under former DTM driver Andreas Vogt.</div>
+      </div>
+      <div class="timeline__cell">
+        <div class="timeline__year">2018</div>
+        <div class="timeline__title">Manufaktur</div>
+        <div class="timeline__body">In-house Manufaktur atelier opens behind the Munich showroom. Eight bespoke commissions delivered each month.</div>
+      </div>
+      <div class="timeline__cell">
+        <div class="timeline__year">2021</div>
+        <div class="timeline__title">Dubai · Singapore</div>
+        <div class="timeline__body">Asia-Pacific expansion. The Singapore showroom houses the largest M heritage collection outside Munich.</div>
+      </div>
+      <div class="timeline__cell">
+        <div class="timeline__year">2024</div>
+        <div class="timeline__title">Los Angeles</div>
+        <div class="timeline__body">Fifth showroom opens in Beverly Hills. The first hybrid-era M5 sold in the United States is delivered here.</div>
+      </div>
+      <div class="timeline__cell">
+        <div class="timeline__year">2025</div>
+        <div class="timeline__title">EV pilot</div>
+        <div class="timeline__body">Partnership with M Performance Electric formalised. Chadyul becomes the lead retail partner for the first all-electric M.</div>
+      </div>
+      <div class="timeline__cell">
+        <div class="timeline__year">2026</div>
+        <div class="timeline__title">Now</div>
+        <div class="timeline__body">Forty-five years on, the wall still reads M only. Twenty-seven thousand four hundred cars later, the standard holds.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="section section--soft">
+  <div class="cm-container">
+    <div class="section__head">
+      <div>
+        <div class="section__kicker">Leadership</div>
+        <h2>The people<br>behind the desk.</h2>
+      </div>
+      <a href="contact.html" class="textlink">Get in touch</a>
+    </div>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="team-card__photo">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80&auto=format&fit=crop" alt="" onerror="this.style.display='none'">
+        </div>
+        <div class="team-card__name">Markus Chadyul</div>
+        <div class="team-card__role">CEO · Third generation</div>
+      </article>
+      <article class="team-card">
+        <div class="team-card__photo">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80&auto=format&fit=crop" alt="" onerror="this.style.display='none'">
+        </div>
+        <div class="team-card__name">Sophia Rauch</div>
+        <div class="team-card__role">Head of Manufaktur</div>
+      </article>
+      <article class="team-card">
+        <div class="team-card__photo">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&auto=format&fit=crop" alt="" onerror="this.style.display='none'">
+        </div>
+        <div class="team-card__name">Andreas Vogt</div>
+        <div class="team-card__role">Track Academy · Lead Instructor</div>
+      </article>
+      <article class="team-card">
+        <div class="team-card__photo">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80&auto=format&fit=crop" alt="" onerror="this.style.display='none'">
+        </div>
+        <div class="team-card__name">Lena Brückner</div>
+        <div class="team-card__role">Head of Customer Care</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section">
+  <div class="cm-container">
+    <div class="about-two-col">
+      <div>
+        <div class="section__kicker">Philosophy</div>
+        <h2 style="font-family:var(--cm-font-display);font-size:clamp(40px,5vw,56px);font-weight:700;line-height:1.05;letter-spacing:-0.3px;text-transform:uppercase;color:#fff;">Three rules<br>we don't break.</h2>
+      </div>
+      <div>
+        <p style="font-family:var(--cm-font-display);font-size:24px;font-weight:700;color:#fff;text-transform:uppercase;line-height:1.2;letter-spacing:-0.2px;margin-bottom:12px;">01 — M only.</p>
+        <p>The wall has read M for forty-five years. We do not stock the wider range. A customer who walks in asking for a saloon walks out with a directions card to a sister dealership two streets away.</p>
+        <p style="font-family:var(--cm-font-display);font-size:24px;font-weight:700;color:#fff;text-transform:uppercase;line-height:1.2;letter-spacing:-0.2px;margin:40px 0 12px;">02 — One specialist, one customer.</p>
+        <p>From enquiry to handover to the morning of the two-hundred-thousandth kilometre, the same name sits in the file. No call-centre triage, no rotation, no escalation tree.</p>
+        <p style="font-family:var(--cm-font-display);font-size:24px;font-weight:700;color:#fff;text-transform:uppercase;line-height:1.2;letter-spacing:-0.2px;margin:40px 0 12px;">03 — The work is signed.</p>
+        <p>Every service ticket carries the name of the lead technician who carried out the work. Every Manufaktur commission carries the signature of the atelier head. Accountability is not a process. It is a person.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band__bg" style="background-image:url('https://images.unsplash.com/photo-1493238792000-8113da705763?w=2000&q=80&auto=format&fit=crop')"></div>
+  <div class="cm-container cta-band__inner">
+    <div class="section__kicker" style="color:#fff;">— Visit us</div>
+    <h2>Walk into a showroom.</h2>
+    <p>Five doors across three continents. The espresso machine in Munich is older than most of the cars. You're welcome anyway.</p>
+    <div class="cta-band__buttons">
+      <a href="contact.html" class="btn">Find a showroom</a>
+      <a href="services.html" class="btn btn--outline">See our services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="cm-container">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <span class="site-footer__brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <h4>CHADYUL<br>MOTORS</h4>
+        <p>Authorised dealer for the M division. Showrooms in Munich, London, Dubai, Singapore and Los Angeles.</p>
+      </div>
+      <div class="site-footer__col">
+        <h5>Models</h5>
+        <ul>
+          <li><a onclick="window.joinWaitlist('M2 Competition')">M2 Competition</a></li>
+          <li><a onclick="window.joinWaitlist('M3 CS')">M3 CS</a></li>
+          <li><a onclick="window.joinWaitlist('M4 Coupe')">M4 Coupe</a></li>
+          <li><a onclick="window.joinWaitlist('M5 Competition')">M5 Competition</a></li>
+          <li><a onclick="window.joinWaitlist('X3 M · X5 M')">X3 M · X5 M</a></li>
+          <li><a onclick="window.joinWaitlist('XM Label')">XM Label</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h5>Services</h5>
+        <ul>
+          <li><a onclick="window.bookNow('Test drive')">Test drive</a></li>
+          <li><a onclick="window.bookNow('Finance &amp; leasing')">Financing</a></li>
+          <li><a onclick="window.bookNow('Trade-in valuation')">Trade-in</a></li>
+          <li><a onclick="window.bookNow('Service or maintenance')">Service plans</a></li>
+          <li><a onclick="window.bookNow('Track academy')">Track days</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Chadyul</a></li>
+          <li><a href="case-studies.html">Case studies</a></li>
+          <li><a onclick="window.bookNow('Track academy')">Motorsport</a></li>
+          <li><a onclick="window.bookNow('Other')">Careers</a></li>
+          <li><a onclick="window.bookNow('Other')">Press</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="contact.html">Showrooms</a></li>
+          <li><a href="tel:+498912900440">+49 89 1290 0440</a></li>
+          <li><a href="contact.html">hello@chadyul.com</a></li>
+          <li><a onclick="window.joinWaitlist('Newsletter')">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__stripe"></div>
+    <div class="site-footer__legal">
+      <div><a href="#">Privacy</a><a href="#">Cookie settings</a><a href="#">Legal</a><a href="#">Imprint</a></div>
+      <div>© 2026 Chadyul Motors AG · All rights reserved</div>
+    </div>
+  </div>
+</footer>
+
+<!-- SEARCH OVERLAY -->
+<div id="search-overlay" class="search-overlay">
+  <button id="search-close" class="search-overlay__close">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    ESC to close
+  </button>
+  <div class="search-overlay__inner">
+    <div class="search-overlay__label">Search models, services &amp; more</div>
+    <input id="search-input" class="search-overlay__input" type="search" placeholder="TYPE TO SEARCH..." autocomplete="off"
+      onkeydown="if(event.key==='Enter'&&this.value){window.location.href='contact.html'}">
+    <div class="search-overlay__hint">Press ENTER · ESC to close</div>
+  </div>
+</div>
+
+<!-- MOBILE NAV -->
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+  <button id="mobile-nav-close" class="mobile-nav__close" aria-label="Close menu">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="mobile-nav__stripe"></div>
+  <a href="index.html">Models</a>
+  <a href="services.html">Services</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="about.html" class="is-active">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- MODAL BACKDROP -->
+<div id="modal-backdrop" class="modal-backdrop"></div>
+
+<!-- BOOKING MODAL -->
+<div id="modal-booking" class="modal">
+  <div class="modal__box">
+    <button id="booking-close" class="modal__close" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal__kicker">— Chadyul Motors</div>
+    <h2 class="modal__title">Book a consultation.</h2>
+    <p class="modal__sub">A specialist responds within one business day. For test drives, finance quotes, track days and Manufaktur commissions.</p>
+    <form id="booking-form" class="modal__form">
+      <div class="modal__row">
+        <div class="field"><label for="bk-fname">First name</label><input id="bk-fname" type="text" placeholder="First name" required></div>
+        <div class="field"><label for="bk-lname">Last name</label><input id="bk-lname" type="text" placeholder="Last name" required></div>
+      </div>
+      <div class="modal__row">
+        <div class="field"><label for="bk-email">Email</label><input id="bk-email" type="email" placeholder="name@example.com" required></div>
+        <div class="field"><label for="bk-phone">Phone</label><input id="bk-phone" type="tel" placeholder="+49 89 0000 0000"></div>
+      </div>
+      <div class="modal__row">
+        <div class="field">
+          <label for="bk-topic">Topic</label>
+          <select id="bk-topic">
+            <option>Test drive</option><option>Consultation</option><option>Track academy</option>
+            <option>Manufaktur commission</option><option>Trade-in valuation</option>
+            <option>Service or maintenance</option><option>Finance &amp; leasing</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="bk-model">Model of interest</label>
+          <select id="bk-model">
+            <option>M2 Competition</option><option>M3 CS</option><option>M4 Competition Coupe</option>
+            <option>M5 Competition</option><option>X3 M / X5 M</option><option>XM Label</option>
+            <option>Not decided yet</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Preferred showroom</label>
+        <select>
+          <option>Munich · Leopoldstraße</option><option>London · Berkeley Square</option>
+          <option>Dubai · DIFC</option><option>Singapore · Orchard</option>
+          <option>Los Angeles · Beverly Hills</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Message (optional)</label>
+        <textarea placeholder="Anything we should know before we call?"></textarea>
+      </div>
+      <div class="modal__actions">
+        <button type="submit" class="btn">Send enquiry</button>
+        <a href="tel:+498912900440" class="btn btn--outline">Call instead</a>
+      </div>
+      <div id="booking-success" class="modal__success">Enquiry received — a specialist will be in touch within one business day.</div>
+    </form>
+  </div>
+</div>
+
+<!-- WAITLIST MODAL -->
+<div id="modal-waitlist" class="waitlist-modal">
+  <div class="waitlist-modal__box">
+    <button id="waitlist-close" class="waitlist-modal__close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <span class="waitlist-modal__mark" aria-hidden="true"><span></span><span></span><span></span></span>
+    <div class="waitlist-modal__eyebrow">Coming soon</div>
+    <h2 id="wl-title" class="waitlist-modal__title">Configurator</h2>
+    <p class="waitlist-modal__body">We're building something. Join the waitlist and be first to configure your M when it launches.</p>
+    <form id="waitlist-form" class="waitlist-modal__input-row">
+      <input type="email" placeholder="your@email.com" required>
+      <button type="submit" class="btn">Join waitlist</button>
+    </form>
+    <div id="waitlist-success" class="waitlist-modal__success">You're on the list — we'll be in touch.</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function eid(id){return document.getElementById(id);}
+  function openO(id){var e=eid(id);if(e)e.classList.add('is-open');document.body.style.overflow='hidden';}
+  function closeO(id){var e=eid(id);if(e)e.classList.remove('is-open');}
+  function closeAll(){['search-overlay','mobile-nav','modal-booking','modal-backdrop','modal-waitlist'].forEach(function(id){closeO(id);});document.body.style.overflow='';}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll();});
+  document.querySelectorAll('[data-open="search"]').forEach(function(b){b.addEventListener('click',function(){openO('search-overlay');setTimeout(function(){var i=eid('search-input');if(i)i.focus();},100);});});
+  var sc=eid('search-close');if(sc)sc.addEventListener('click',closeAll);
+  var so=eid('search-overlay');if(so)so.addEventListener('click',function(e){if(e.target===so)closeAll();});
+  var hb=document.querySelector('.hamburger');if(hb)hb.addEventListener('click',function(){openO('mobile-nav');});
+  var mc=eid('mobile-nav-close');if(mc)mc.addEventListener('click',function(){closeO('mobile-nav');document.body.style.overflow='';});
+  document.querySelectorAll('[data-open="locations"]').forEach(function(b){b.addEventListener('click',function(){window.location.href='contact.html';});});
+  document.querySelectorAll('[data-open="account"]').forEach(function(b){b.addEventListener('click',function(){window.bookNow('Service or maintenance');});});
+  var bd=eid('modal-backdrop');if(bd)bd.addEventListener('click',function(e){if(e.target===bd)closeAll();});
+  window.bookNow=function(topic,model){
+    var ts=eid('bk-topic');if(ts&&topic)ts.value=topic;
+    var ms=eid('bk-model');if(ms&&model)ms.value=model;
+    openO('modal-backdrop');openO('modal-booking');
+  };
+  var bc=eid('booking-close');if(bc)bc.addEventListener('click',closeAll);
+  var bf=eid('booking-form');if(bf)bf.addEventListener('submit',function(e){
+    e.preventDefault();var ok=eid('booking-success');if(ok)ok.style.display='block';this.reset();
+    setTimeout(function(){closeAll();var ok2=eid('booking-success');if(ok2)ok2.style.display='none';},3000);
+  });
+  window.joinWaitlist=function(name){
+    var t=eid('wl-title');if(t)t.textContent=(name?name+' ':'')+'CONFIGURATOR';
+    openO('modal-backdrop');openO('modal-waitlist');
+  };
+  var wc=eid('waitlist-close');if(wc)wc.addEventListener('click',closeAll);
+  var wf=eid('waitlist-form');if(wf)wf.addEventListener('submit',function(e){
+    e.preventDefault();var ok=eid('waitlist-success');if(ok)ok.style.display='block';this.reset();
+    setTimeout(function(){closeAll();var ok2=eid('waitlist-success');if(ok2)ok2.style.display='none';},3000);
+  });
+})();
+</script>
+</body>
+</html>
