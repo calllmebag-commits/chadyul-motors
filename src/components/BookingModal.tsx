@@ -90,7 +90,7 @@ export default function BookingModal() {
     }
 
     // Create order on server
-    let orderData: { orderId: string; amount: number; currency: string; keyId: string }
+    let orderData: { orderId?: string; amount?: number; currency?: string; keyId?: string; error?: string }
     try {
       const res = await fetch('/api/payment/create-order', {
         method: 'POST',
@@ -110,10 +110,10 @@ export default function BookingModal() {
 
     // Open Razorpay checkout
     const rzp = new window.Razorpay({
-      key: orderData.keyId,
-      amount: orderData.amount,
-      currency: orderData.currency,
-      order_id: orderData.orderId,
+      key: orderData.keyId!,
+      amount: orderData.amount!,
+      currency: orderData.currency!,
+      order_id: orderData.orderId!,
       name: 'Chadyul Motors',
       description: `Booking deposit — ${data.topic}`,
       prefill: {
