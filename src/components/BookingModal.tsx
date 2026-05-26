@@ -21,6 +21,7 @@ export default function BookingModal() {
   const [payError, setPayError] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
   const bookingDataRef = useRef<Record<string, string>>({})
+  const txnRef = useRef<string>('')
 
   useEffect(() => {
     if (booking.open && inputRef.current) setTimeout(() => inputRef.current?.focus(), 100)
@@ -77,16 +78,23 @@ export default function BookingModal() {
 
   async function processPayment() {
     setStep('processing')
-    // Simulate processing delay
     await new Promise(r => setTimeout(r, 2800))
-    // Save booking to Supabase
+    const txnId = `CM${Date.now()}`
     try {
-      await fetch('/api/bookings', {
+      await fetch('/api/payment/complete', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(bookingDataRef.current),
+        body: JSON.stringify({
+          booking: bookingDataRef.current,
+          payment: {
+            transaction_id: txnId,
+            method,
+            amount: 500000,
+          },
+        }),
       })
     } catch {}
+    txnRef.current = txnId
     setStep('success')
     setTimeout(() => { closeAll(); setStep('form'); resetPayFields() }, 4000)
   }
@@ -311,7 +319,7 @@ export default function BookingModal() {
               <div style={{ marginTop: '20px', padding: '16px', border: '1px solid var(--cm-border)', textAlign: 'left' }}>
                 <div style={{ fontSize: '11px', color: 'var(--cm-muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>Transaction reference</div>
                 <div style={{ fontSize: '13px', color: 'var(--cm-heading)', fontFamily: 'monospace', letterSpacing: '0.05em' }}>
-                  CM{Date.now().toString().slice(-8).toUpperCase()}
+                  {txnRef.current}
                 </div>
               </div>
             </div>
